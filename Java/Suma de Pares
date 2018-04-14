@@ -1,0 +1,33 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+
+public class SumaPares {
+	private int []n = null;
+	
+	public SumaPares(int []n) throws IOException {
+		this.n = n;
+		
+		InputStreamReader isr = new InputStreamReader (System.in);
+		BufferedReader entrada = new BufferedReader (isr);
+		System.out.println("Ingrese la cantidad de n˙meros : ");
+			for (int i=0; i<n.length; i++){
+				System.out.println("Ingrese un n˙mero : ");
+				n[i]=Integer.parseInt(entrada.readLine());
+			}
+	}
+	
+	public int suma()
+	{	
+			int suma=0;
+			for (int i=0; i<n.length; i++)
+			if (i%2==0){
+					suma= suma+ n[i];
+					
+				}
+			return suma/n.length;
+			
+	}
+
+}
