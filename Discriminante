@@ -1,0 +1,11 @@
+b= input ("b: ")
+a= input ("a: ")
+c= input ("c: ")
+
+res = b**2 - 4*a*c
+
+if (res<0):
+	print ("discriminante negativo")
+else:
+	print ("discriminante positivo o cero")
+	
