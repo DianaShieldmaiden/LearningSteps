@@ -1,0 +1,38 @@
+import turtle
+def draw_shape():
+	window = turtle.Screen()
+	window.bgcolor("yellow")
+
+	
+	dani = turtle.Turtle()
+	dani.shape("arrow")
+	dani.color("green")
+	dani.speed(8)
+	dani.forward (100)
+	dani.right(90)
+	dani.forward (100)
+	dani.right(90)
+	dani.forward (100)
+	dani.right(90)
+	dani.forward (100)
+	dani.right(90)
+
+	angie = turtle.Turtle()
+	angie.shape("turtle")
+	angie.speed(8)
+	angie.color("red")
+	angie.circle(100)
+
+	molly = turtle.Turtle()
+	molly.shape("triangle")
+	molly.speed(8)
+	molly.color("blue")
+	molly.backward(100)
+	molly.right(120)
+	molly.backward(100)
+        molly.right(120)
+ 	molly.backward(100)
+
+	window.exitonclick()
+
+draw_shape()
