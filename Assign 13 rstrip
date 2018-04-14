@@ -1,0 +1,16 @@
+import re
+name = raw_input ('Enter a file :')
+hand = open(name)
+count = 0
+total = 0
+
+for line in hand:
+    line = line.rstrip()
+    nmrs = re.findall('([0-9]+)', line)
+    for elements in nmrs:
+        count = count + 1
+        num = int (elements)
+        total = total + num
+        
+print total
+    
