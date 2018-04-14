@@ -1,0 +1,25 @@
+
+public class Ejercicio5 {
+
+	public static void main(String[] args) {
+		/* Genere una aplicacion que permita calcular el promedio final de un alumno de este curso. Para ello, se debe establecer 
+		 * previamente la nota de ambas solemnes, de tres controles y de la tarea. Recuerde que las notas deben considerar 
+		 *notaciÛn decimal.
+		 */
+		
+		double c1 = 6.5;
+		double c2 = 6.0;
+		double c3 = 5.5;
+		double sol1 = 6.0;
+		double sol2 = 5.3;
+		double tarea = 5.5;
+		double prom;
+		
+		prom = ((c1 + c2 + c3)*0.2) + (sol1*0.3) + (sol2*0.3) + (tarea*0.2)/6;
+		
+		System.out.println("El promedio de notas es : " + prom);
+		
+		
+	}
+
+}
