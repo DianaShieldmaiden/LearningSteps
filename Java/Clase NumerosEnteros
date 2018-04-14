@@ -1,0 +1,25 @@
+/*1.- Escriba una clase que genere un archivo de texto de nombre ìnumerosenteros.txtî 
+ * con el listado de los n˙meros enteros entre 1 y 100; cada n˙mero del archivo debe estar en una lÌnea distinta.
+ */
+
+import java.io.*;
+public class Ejercicio1 {
+
+	public static void main(String[] args) throws IOException
+	{
+		
+		File fichero = new File("numerosenteros.txt");
+		FileWriter fr = new FileWriter (fichero);
+		PrintWriter p1 = new PrintWriter (fr);
+
+
+		
+		for (int i=1; i<=100;i++){
+			p1.println("Numero " + i);
+			
+		}
+		
+		p1.close();
+	}
+
+}
