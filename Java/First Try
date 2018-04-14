@@ -1,0 +1,41 @@
+import java.io.*;
+public class trying {
+
+	@SuppressWarnings("null")
+	public static void main(String[] args)throws IOException
+	
+	{
+		File fichero = new File("numerosaleatorios.dat");
+		FileReader fr = new FileReader (fichero);
+		BufferedReader br = new BufferedReader(fr);
+		
+		
+		System.out.println("Leyendo fichero...");
+		String s = br.readLine();
+		int cont = 0, suma;
+		while (s != null){
+			System.out.println("LÌnea leÌda: " + s);
+			
+			
+			for(int i =0; i<=s.length();i++){
+				i = Integer.parseInt(s);
+				System.out.println("El numero elevado es : "+i*i);
+			}
+			
+			s = br.readLine();
+			
+			
+		}
+		
+		for(int a=1; a<=s.length();a++){
+			
+			a = Integer.parseInt(s);
+			suma = a+cont;
+			cont++;
+			System.out.println("La suma de los numeros es :" +suma);
+		}
+		fr.close();
+
+	}
+
+}
