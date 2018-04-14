@@ -1,0 +1,43 @@
+import java.io.*;
+ 
+/*Diana Jimenez Mora
+ * Tarea TP 15
+ * Profesor Jacob Vega
+ * 
+ */
+
+public class TareaDianaJimenez {
+
+	
+
+		 public static void main(String[] args) throws IOException {
+             char matriz[][] = new char[10][10];
+
+             File archivo = new File("codigo.dat");
+             System.out.println(archivo.getAbsolutePath());
+             FileReader fr = new FileReader(archivo);
+             BufferedReader br = new BufferedReader(fr);
+
+             System.out.println("Leyendo fichero...");
+             String s = br.readLine();
+
+             while (s != null) {
+                     System.out.println(s);
+                     String[] array = s.split(",");
+                     int i = Integer.parseInt(array[0]);
+                     int j = Integer.parseInt(array[1]);
+                     matriz[i][j] = (char) Integer.parseInt(array[2]);
+                     s = br.readLine();
+             }
+
+             for (int i = 0; i < matriz.length; i++) {
+                     System.out.println("");
+                     for (int j = 0; j < matriz[i].length; j++) {
+                             System.out.print(matriz[i][j] + " ");
+                     }
+             }
+             br.close();
+     }
+
+
+}
