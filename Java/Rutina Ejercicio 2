@@ -1,0 +1,37 @@
+/*2.- Genere una rutina que lea desde el mismo archivo de la pregunta anterior 
+ * los 10 primeros n˙meros divisibles por 4, los eleve al cuadrado y los almacene 
+ * en un archivo de nombre ìalcuadrado.txtî.
+ */
+
+import java.io.*;
+
+public class Ejercicio2 {
+
+	public static void main(String[] args) throws IOException
+	{
+		
+		File fichero = new File("numerosenteros.txt");
+		FileReader fr =  new FileReader(fichero);
+		BufferedReader br = new BufferedReader(fr);
+		
+		System.out.println("Leyendo fichero...");
+		String s = br.readLine();
+		while (s != null){
+			System.out.println("LÌnea leÌda: " + s);
+			s = br.readLine();
+			int i;
+			
+			String [] whatever = s.split(",");
+			i=Integer.parseInt(s);
+			
+			if(Integer.parseInt(whatever[i])%4 == 0){
+				System.out.println("Los numeros divisibles por 4 son : " +s);
+				
+			}
+		
+	}
+		br.close();
+		System.out.println("Fichero leÌdo");
+
+	}
+}
