@@ -1,0 +1,34 @@
+import turtle
+
+def draw_myinitials():
+	window = turtle.Screen()
+	window.bgcolor("orange")
+        draw_initials()
+
+	window.exitonclick()
+
+def draw_initials():
+        
+        inidj = turtle.Turtle()
+	inidj.shape("turtle")
+        inidj.pensize(6)
+        inidj.color("black")
+        inidj.speed(5) 
+        inidj.circle(120, 180)
+        inidj.left(90)
+        inidj.forward(240)
+        inidj.left(90)
+        inidj.penup()
+	inidj.forward(120)
+        inidj.pendown()
+        inidj.right(90)
+        inidj.forward(180)
+        inidj.left(90)
+        inidj.backward(90)
+        inidj.left(90)
+        inidj.forward(50)
+        inidj.penup()
+        inidj.forward(250)
+        inidj.pendown()         
+    
+draw_myinitials()
