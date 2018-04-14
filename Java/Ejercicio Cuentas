@@ -1,0 +1,58 @@
+1) BORRADOR DE SOLUCION EJERCICIO CUENTAS:
+- COMPLETARLO
+
+package clase1;
+import java.util.Scanner;
+public class GestionCuentas {
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        Cuentas a = new Cuentas();
+        Cuentas b = new Cuentas();
+        boolean op = true;
+        int m1, m2;
+        do {
+            System.out.println("MENU-1");
+            System.out.println("1 Cuenta a");
+            System.out.println("2 Cuenta b");
+            System.out.println("3 Salir");
+            System.out.print("Ingrese opcion:");
+            m1 = leer.nextInt();
+            switch (m1) {
+                case 1:
+                    do {
+                        System.out.println("MENU-2");
+                        System.out.println("1 abono");
+                        System.out.println("2 cargo");
+                        System.out.println("3 Saldo");
+                        System.out.println("4 Salir");
+                        System.out.print("Ingrese opcion:");
+                        m2 = leer.nextInt();
+                        if (m2 == 1) {
+                            a.abonar(5000);
+                        } else if (m2 == 2) {
+                            a.cargar(2000);
+                        } else if (m2 == 3) {
+                            System.out.println("Saldo:" + a.saldo);
+                        }
+                    } while (m2 != 4);
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    op = false;
+                    break;
+                default:
+            }
+        } while (op);
+    }
+}
+package clase1;
+public class Cuentas {
+    int saldo, abono, cargo;
+    void abonar(int monto){
+        saldo+=monto;
+    }
+    void cargar(int monto){
+        saldo-=monto;
+    }
+}
