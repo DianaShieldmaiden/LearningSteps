@@ -1,0 +1,15 @@
+from twilio.rest import TwilioRestClient
+
+# Your Account SID from twilio.com/console
+account_sid = "AC425ddcc05efc7372bc2b784a1e2457e9"
+# Your Auth Token from twilio.com/console
+auth_token  = "a1bf9bafdb3dc989d4fcdc73972b6fc8"
+
+client = TwilioRestClient(account_sid, auth_token)
+
+message = client.messages.create(
+    to="+15623043415", 
+    from_="+14243591432",
+    body="Que fome!")
+
+print(message.sid)
